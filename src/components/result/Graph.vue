@@ -3,8 +3,8 @@
     <div class="graph">
       <v-column
         v-for="(choice, index) in getAnswerDistribution"
-        :choice="choice"
         :key="choice.title"
+        :choice="choice"
         :index="index"
         :total="totalAnswerCount"
         :player-answer="

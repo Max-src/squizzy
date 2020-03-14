@@ -21,7 +21,7 @@ function nextQuestion(match) {
   const {currentQuestionKey, quiz} = match
   const {questions} = quiz
   const index = questions.map(question => question._key).indexOf(currentQuestionKey)
-  return questions[index + 1]
+  return questions[index] /* + 1] TODO A DECOMMENTER*/
 }
 
 class Match extends React.Component {

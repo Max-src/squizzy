@@ -56,9 +56,12 @@ export default {
         // shortcut for a more snappy client experience
         return true;
       }
+
       const player = this.$store.state.playerStore.player;
       const match = this.$store.state.matchStore.match;
+
       const { answers = [] } = match;
+
       return answers.some(
         answer =>
           answer.questionKey === match.currentQuestionKey &&

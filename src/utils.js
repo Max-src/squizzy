@@ -41,6 +41,10 @@ const sortBy = (sortField, direction = "asc") => {
   };
 };
 
+export const themeColor1 = (match, questionKey = 0) => {
+  return "Color1 dans la fonction";
+};
+
 // Use the questionKey parameter to get scores for that particular question only
 export const scoresByPlayer = (match, questionKey = 0) => {
   const { currentQuestionKey, answers, quiz, players = [] } = match;

@@ -160,23 +160,20 @@
 /* choice 1 - Circle */
 .choiceCard[data-choice="0"] {
   background: var(--quiz-red); 
-  border-radius: 30px;
 }
 
 /* choice 2 - Star */
 .choiceCard[data-choice="1"] {
   background: var(--quiz-green);
-  border-radius: 30px;
 }
 
 /* choice 3 - Triangle */
 .choiceCard[data-choice="2"] {
   background: var(--quiz-blue);
-  border-radius: 30px;
 }
 
 /* choice 4 - Square */
 .choiceCard[data-choice="3"] {
   background: var(--quiz-purple);
-  border-radius: 30px;
 }
+

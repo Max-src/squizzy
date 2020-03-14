@@ -1,4 +1,5 @@
 import {MdQuestionAnswer} from 'react-icons/md'
+import {object} from 'prop-types'
 
 export default {
   name: 'quiz',

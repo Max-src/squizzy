@@ -113,9 +113,12 @@ class QuizMatchTool extends React.Component {
     const documentId = this.props.router.state.selectedDocumentId
     if (documentId) {
       client
-        .fetch(`*[_id==$documentId][0]{..., quiz->, players[]->, answers[]{...,player->}}`, {
-          documentId
-        })
+        .fetch(
+          `*[_id==$documentId][0]{..., quiz->, players[]->, answers[]{...,player->}, theme->}`,
+          {
+            documentId
+          }
+        )
         .then(match => this.setState({match}))
         .catch(error => console.log(error))
     }
@@ -164,7 +167,7 @@ class QuizMatchTool extends React.Component {
             {this.renderMatchList()}
             <div className={styles.welcome}>
               <Squizzy />
-              <h1 className={styles.welcomeMessage}>Welcome to Squizzy!</h1>
+              <h1 className={styles.welcomeMessage}>Welcome to Max-Quizz!</h1>
               <p className={styles.welcomeMessage}>Please select a match to start playing.</p>
             </div>
           </>

@@ -384,13 +384,9 @@ export default {
   transform-origin: 50% 50%
   animation: float 4s infinite ease-in-out forwards
 
-#body-background
+#body-background-toto
   transform-origin: 50% 50%
   animation: background 3s 0.5s infinite ease-in-out forwards
-
-#body-background2
-    transform-origin: 50% 50%
-    animation: background 8s 0.7s infinite ease-in-out forwards
 
 @keyframes float
   0%, 100%

@@ -1,0 +1,50 @@
+/* eslint-disable no-unused-vars */
+import nanoid from "nanoid";
+
+import { signUp } from "../squizzyServerApi";
+
+const getters = {
+  themeId(state) {
+    return state.theme.id;
+  }
+};
+
+const mutations = {
+  REGISTER_THEME(state, theme) {
+    if (theme) {
+      state.theme = {
+        id: theme.themeId
+      };
+    } else {
+      state.theme = theme;
+    }
+  }
+};
+
+const actions = {
+  registerNewTheme({ commit, rootGetters }, themeName) {
+    // The registered theme
+    const body = {
+      playerId: nanoid(),
+      themeName
+    };
+    return (result => {
+      if (result === true) {
+        // Commit the theme mutation
+        commit("REGISTER_THEME", body);
+      }
+      // Set the loading state to false
+      commit("SET_IS_LOADING", false);
+      return result;
+    });
+  },
+
+};
+
+export default {
+  namespaced: true,
+  state,
+  getters,
+  mutations,
+  actions
+};

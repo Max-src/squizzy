@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-cloak>
+  <div v-cloak id="app">
     <the-navbar />
     <router-view />
   </div>

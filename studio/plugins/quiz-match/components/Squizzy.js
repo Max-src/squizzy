@@ -7,12 +7,17 @@ const Squizzy = props => {
   const classes = `${styles.squizzy} ${className || ''}`
   return (
     <div className={classes}>
-      <svg viewBox="0 0 195 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 195 260" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="squizzy">
           <path
             id={styles.bodyBackground}
             d="M187.978 162.42C169.045 205.377 113.247 222.373 63.3488 200.381C13.4506 178.389 -11.6519 125.738 7.28075 82.7807C26.2134 39.8236 82.0119 22.8279 131.91 44.8198C181.808 66.8117 206.911 119.463 187.978 162.42Z"
             fill="#E6CDFF"
+          />
+          <path
+            id={styles.bodyBackground2}
+            d="M363.039,145.627c-12.446,5.544-27.17,4.15-38.447-4.231l0,0c-13.574-10.088-32.154-10.088-45.728,0  l0,0c-13.574,10.088-32.154,10.088-45.728,0l0,0c-13.574-10.088-32.154-10.088-45.728,0l0,0c-11.277,8.38-26,9.774-38.447,4.231  c-16.475,22.176-26.227,49.645-26.227,79.394h266.531C389.265,195.272,379.514,167.802,363.039,145.627z"
+            fill="#F7D9A4"
           />
           <g id={styles.body}>
             <g id="tentacles">
@@ -371,12 +376,12 @@ const Squizzy = props => {
 Squizzy.propTypes = {
   eyes: PropTypes.string,
   mouth: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 }
 
 Squizzy.defaultProps = {
   eyes: 'default',
-  mouth: 'default',
+  mouth: 'default'
 }
 
 export default Squizzy

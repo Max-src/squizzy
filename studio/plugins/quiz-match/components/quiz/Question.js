@@ -19,12 +19,20 @@ class Question extends React.Component {
 
   renderChoices = () => {
     const {match} = this.props
+
     const currentQuestion = findCurrentQuestion(match)
+
+    const {colors = []} = match.theme
 
     return currentQuestion.choices.map((choice, index) => {
       const Symbol = Icons[index]
       return (
-        <div key={choice._key} className={styles.choiceCard} data-choice={index}>
+        <div
+          key={choice._key}
+          className={styles.choiceCard}
+          data-choice={index}
+          style={{background: colors[index].hex}}
+        >
           <div className={styles.inner}>
             <div className={styles.symbol}>
               <Symbol />

@@ -37,6 +37,13 @@ export default {
       to: [{type: 'quiz'}]
     },
     {
+      name: 'theme',
+      title: 'Theme',
+      type: 'reference',
+      description: 'You need to have published your theme before it appears here.',
+      to: [{type: 'theme'}]
+    },
+    {
       name: 'startedAt',
       title: 'Started At',
       type: 'datetime',

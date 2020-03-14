@@ -12,13 +12,18 @@
 }
 
 #body {
-  transform-origin: 50% 50%;
+  transform-origin: 40% 50%;
   animation: float 5s infinite ease-in-out forwards;
 }
 
 #bodyBackground {
   transform-origin: 50% 50%;
   animation: background 3s 0.5s infinite ease-in-out forwards;
+}
+
+#bodyBackground2 {
+  transform-origin: 50% 50%;
+  animation: background2 8s 0.7s infinite ease-in-out forwards;
 }
 
 @keyframes float {
@@ -36,5 +41,14 @@
   }
   50% {
     transform: scale(0.95) rotate(-10deg)
+  }
+}
+
+@keyframes background2 {
+  0%, 100% {
+    transform: scale(1.10) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.80) rotate(-30deg)
   }
 }
