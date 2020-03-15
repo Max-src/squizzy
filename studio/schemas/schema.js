@@ -11,11 +11,12 @@ import quiz from './documents/quiz'
 import answer from './objects/answer'
 import choice from './objects/choice'
 import question from './objects/question'
+import icon from './objects/icon'
 
 import theme from './documents/theme'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([match, player, quiz, answer, choice, question, theme])
+  types: schemaTypes.concat([match, player, quiz, answer, choice, question, theme, icon])
 })

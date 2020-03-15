@@ -26,16 +26,32 @@ export default {
       name: 'colors',
       type: 'array',
       of: [{type: 'color'}],
+      options: {
+        layout: 'grid'
+      },
       validation: Rule =>
         Rule.custom(colors => {
-          if (!colors) {
-            return true
+          if (!colors || colors.length != 4) {
+            return `A theme must have 4 colors`
           }
-          if (colors.length < 1) {
-            return `A theme must have at least 1 color`
+          return true
+        })
+    },
+    {
+      title: 'Icons',
+      name: 'icons',
+      type: 'array',
+      of: [{type: 'icon'}],
+      options: {
+        layout: 'grid'
+      },
+      validation: Rule =>
+        Rule.custom(icons => {
+          if (!icons) {
+            return
           }
-          if (colors.length > 4) {
-            return `A theme can't have more than 4 colors`
+          if (!icons || icons.length != 4) {
+            return `A theme must have 4 icons`
           }
           return true
         })
